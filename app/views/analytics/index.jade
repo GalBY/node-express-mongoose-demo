@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block main
+  h1= title
+
+block content
+  ul
+    -var index = 0
+    each val, key in freqByTag
+      p
+      li.tag-li
+        i.muted.fa.fa-tag &nbsp;   
+        p.tag-title Tag: #{key}
+          div
+            table.table-striped.tag-analytic.table-bordered
+              thead
+                tr  
+                  th Word
+                  th Frequency
+              tbody
+                each val1, key1 in val
+                  tr
+                    td  #{key1}
+                    td  #{val1}

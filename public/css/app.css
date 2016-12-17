@@ -52,6 +52,24 @@ body {
   border-bottom: 1px solid #e8e8e8;
 }
 
+.tag-analytic {
+  text-align: center;
+  width: 200px;
+}
+
+.tag-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #428bca;
+  display: inline;
+}
+
+.tag-li {
+  display: inline;
+  float: left;
+  padding: 15px;
+}
+
 .form-signin {
   max-width: 330px;
   padding: 15px;

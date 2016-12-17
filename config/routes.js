@@ -9,6 +9,7 @@ const articles = require('../app/controllers/articles');
 const comments = require('../app/controllers/comments');
 const tags = require('../app/controllers/tags');
 const auth = require('./middlewares/authorization');
+const analytics = require('../app/controllers/analytics');
 
 /**
  * Route middlewares
@@ -79,6 +80,7 @@ module.exports = function (app, passport) {
   app.put('/articles/:id', articleAuth, articles.update);
   app.delete('/articles/:id', articleAuth, articles.destroy);
 
+  app.get('/analytics', analytics.index);
   // home route
   app.get('/', articles.index);
 
